@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Générateur de Mots de Passe</title>
+    <link rel="stylesheet" href="generateur.css">
+</head>
+
+<body>
+    <table width="100%" height="250"
+	background="fondaccueil.jpg">
+        <tr>
+            <td width="30%" height="15%">
+                <img src="LogoSite.png" width="40%" align="left">
+            </td>
+            <th><a href="acceuil.html"><font size="5" class="menu-link">Accueil</font></a></th>
+            <th><a href="tpassword.html"><font size="5" class="menu-link">Testeur_mdp</font></a></th>
+            <th width="18%"><a href="generateur.html"><font size="5" class="menu-link">Generateur_mdp</font></a></th>
+            <td><a href="FAQ.html"><font size="4" class="menu-link">FAQ</font></a></td>
+            <td>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'fr',
+                            includedLanguages: 'en,fr',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </td>
+        </tr>
+    </table>
+
+    <div class="criteres">
+        <h1>Générateur de Mots de Passe</h1>
+        <div class="caractere">
+            <label><input type="checkbox" id="specials"> Inclure caractères spéciaux</label>
+            <label><input type="checkbox" id="chiffres"> Inclure des chiffres</label>
+            <label><input type="checkbox" id="lettres"> Inclure des lettres<br><br></label>
+            <label for="password-length-range" style="text-decoration:underline; font-size:1.5em">Longueur du Mot de Passe<br><br></label>
+            <input type="range" id="Plage_longueur" min="6" max="24" value="12"><br><br>
+            <input type="text" id="Longueur_choisie" value="12" readonly>
+            <button id="Mdp_genere">Générer un Mot de Passe</button>
+            <button id="copy-password" onclick="copyPassword()">Copier</button>
+            <div id="Sortie"></div>
+        </div>
+    </div>
+	<p>
+	<hr color="black" size="4" size="2" width ="50%">
+	</p>
+	<table bgcolor="black" height ="150">
+	<tr>
+	<td  width ="30%" align ="center" ><img src ="motdepasse.gif" height="150"></td>
+	<td>
+	<font size ="6" color ="white"><i><b>Assurez-vous de stocker votre mot de passe généré dans un endroit sûr. Ne le partagez jamais avec d'autres personnes.</b></i></font>
+	</td>
+	<tr>
+   </table> 
+
+    <script src="generateur.js"></script>
+</body>
+
+</html>
